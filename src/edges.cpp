@@ -29,7 +29,7 @@ Eigen::MatrixXi edges(const Eigen::MatrixXi &F)
 	int e = 0;
 	for( auto mit = undirectedEdges.begin(); mit != undirectedEdges.end(); ++mit ){
 		for( auto sit = mit->second.begin(); sit != mit->second.end(); ++sit ){
-			E.block<1,2>( e, 0 ) = Eigen::./Vector2i( mit->first, *sit );
+			E.block<1,2>( e, 0 ) = Eigen::Vector2i( mit->first, *sit );
 		}
 	}
 
